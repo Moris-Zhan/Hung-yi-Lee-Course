@@ -537,6 +537,7 @@ class TrainerGAN():
             for j, image in enumerate(generated_images.unbind(0)):
                 torchvision.utils.save_image(image, str(fake_path / f'{str(j + batch_num * self.batch_size)}-ema.{ext}'))
 
+        # FID (Frechet Inception Distance) score
         return fid_score.calculate_fid_given_paths([str(real_path), str(fake_path)], 256, noise.device, 2048)
 
     @torch.no_grad()
