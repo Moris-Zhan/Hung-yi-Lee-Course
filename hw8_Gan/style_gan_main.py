@@ -49,13 +49,12 @@ if __name__ == '__main__':
         batch_size = 32,      
         n_epoch = 20,
         learning_rate = 2e-4,
-        lr_mlp = 0.1,        
         num_workers =  32,      
         generate = True,
         interpolation_num_steps = 100,
         save_frames = True,
-        calculate_fid_every = None,
-        calculate_fid_num_images = 12800,
+        calculate_fid_every = 1000,
+        # calculate_fid_every = None,
     )
     trainer = TrainerGAN(**model_args)
     trainer.load(num=-1)
