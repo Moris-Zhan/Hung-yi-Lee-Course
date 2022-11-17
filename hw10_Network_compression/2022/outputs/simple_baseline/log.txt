@@ -1,0 +1,3 @@
+{'dataset_root': './food11-hw13', 'save_dir': './outputs', 'exp_name': 'simple_baseline', 'batch_size': 64, 'lr': 0.0002, 'seed': 20220013, 'loss_fn_type': 'KD', 'weight_decay': 2e-05, 'grad_norm_max': 10, 'n_epochs': 500, 'patience': 100}
+device: cuda
+[ Train | 001/500 ] loss = 7.22032, acc = 0.20079
